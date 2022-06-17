@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | My project</title>
+    <title>Unity WebGL Player | CryptoMatch3</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=550 height=800></canvas>
+      <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">My project</div>
+        <div id="unity-build-title">CryptoMatch3</div>
       </div>
     </div>
     <script>
@@ -56,16 +56,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Test.asm.loader.js";
+      var loaderUrl = buildUrl + "/PrefWebgl.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Test.data.unityweb",
-        frameworkUrl: buildUrl + "/Test.asm.framework.js.unityweb",
-        codeUrl: buildUrl + "/Test.asm.js.unityweb",
-        memoryUrl: buildUrl + "/Test.asm.mem.unityweb",
+        dataUrl: buildUrl + "/PrefWebgl.data.unityweb",
+        frameworkUrl: buildUrl + "/PrefWebgl.framework.js.unityweb",
+        codeUrl: buildUrl + "/PrefWebgl.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "My project",
-        productVersion: "1.4",
+        productName: "CryptoMatch3",
+        productVersion: "1.0",
         showBanner: unityShowBanner,
       };
 
@@ -83,8 +82,8 @@
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "550px";
-        canvas.style.height = "800px";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
 
